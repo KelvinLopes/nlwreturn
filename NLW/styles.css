@@ -13,6 +13,7 @@
 
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
+  --brand-dark: hsl(170, 100%, 14%);
 
   --bg-light: hsl(180, 14%, 97%);
 
@@ -91,6 +92,46 @@ section .content p {
   line-height: 150%;
 
   color: var(--paragraph-color);
+}
+
+.button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 4rem;
+
+  margin-bottom: 6rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+  color: hsl(0, 0%, 100%);
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-decoration: none;
+
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--brand-dark);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 /*=====Navigation========================*/
@@ -206,13 +247,6 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-}
-
 body .menu-expanded .logo,
 body.menu-expanded button {
   position: relative;
@@ -287,6 +321,10 @@ body.menu-expanded .open-menu button path {
   z-index: -1;
 }
 
+#home .button {
+  margin-inline: auto;
+}
+
 #home h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
@@ -306,31 +344,6 @@ body.menu-expanded .open-menu button path {
   font-size: 1.8rem;
   color: var(--paragraph-color);
   margin-bottom: 3.2rem;
-}
-
-#home button {
-  background: var(--primary-color);
-  border: none;
-  border-radius: 0.8rem;
-
-  margin-bottom: 6rem;
-
-  height: 6.3rem;
-  width: 26.3rem;
-
-  color: hsl(0, 0%, 100%);
-
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 700;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #home img {
@@ -390,4 +403,62 @@ nav button {
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+/*=====#Contact========================*/
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/*=====#Footer========================*/
+footer {
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+
+  color: white;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  color: var(--brand-beige);
+  line-height: 2;
+
+  margin-bottom: 3.2rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
 }
