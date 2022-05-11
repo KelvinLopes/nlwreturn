@@ -52,13 +52,22 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 section {
   padding-block: 10rem;
 }
 
 section header h4 {
   font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.08;
   color: var(--primary-color);
+  text-transform: uppercase;
+
   margin-bottom: 1.6rem;
 }
 
@@ -66,8 +75,6 @@ section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
   color: var(--headline-color);
-
-  margin-bottom: 6rem;
 }
 
 section header h1 {
@@ -75,7 +82,15 @@ section header h1 {
   color: var(--headline-color);
   line-height: 130%;
 
-  margin-bottom: 2, 4;
+  margin-bottom: 2rem;
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--paragraph-color);
 }
 
 /*=====Navigation========================*/
@@ -225,6 +240,34 @@ body.menu-expanded .open-menu button path {
   margin-bottom: 1.6rem;
 }
 
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline-color);
+
+  margin-bottom: 6rem;
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
+  padding: 2.4rem;
+  text-align: left;
+  background: white;
+
+  border: 1px solide var(--brand-light);
+  border-radius: 0.6rem;
+}
+
+#services .card {
+  margin-block: 1.6rem;
+}
+
 /*=====#Home========================*/
 
 #home {
@@ -333,32 +376,18 @@ nav button {
   cursor: pointer;
 }
 
-#services header h2 {
-  font-size: 3rem;
-  line-height: 3.9rem;
+/*=====#About========================*/
 
-  color: var(--headline-color);
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
+}
 
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-top: 2.4rem;
   margin-bottom: 6rem;
 }
-
-#services .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
-}
-
-#services .card {
-  padding: 2.4rem;
-  text-align: left;
-  background: white;
-
-  border: 1px solide var(--brand-light);
-  border-radius: 0.6rem;
-}
-
-#services .card {
-  margin-block: 1.6rem;
-}
-
-/*=====#About========================*/
