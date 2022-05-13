@@ -3,6 +3,38 @@ window.addEventListener('scroll', onScroll)
 function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
+  activatdMenuAtCurrentOnSection(home)
+  activatdMenuAtCurrentOnSection(services)
+  activatdMenuAtCurrentOnSection(about)
+}
+
+function activatdMenuAtCurrentOnSection(section) {
+  const targetLine = scrollY + innerHeight / 2
+
+  //Verifica se a seção passou da linha
+
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+
+  //Verifica se a base está abaixo da linha alvo
+
+  const sectionEndAt = sectionTop + sectionHeight
+
+  const sectionEndPassedTargetLine = sectionEndAt <= targetLine
+
+  //Limites da seção
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
+
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+
+  menuElement.classList.remove('active')
+  if (sectionBoundaries) {
+    menuElement.classList.add('active')
+  }
 }
 
 function showNavOnScroll() {
