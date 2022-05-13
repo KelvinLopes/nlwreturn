@@ -384,7 +384,7 @@ body.menu-expanded .open-menu button path {
   width: 26.4rem;
   display: block;
   margin-inline: auto;
-  object-position: 0 2rem;
+  object-position: 0 3rem;
 }
 
 #home .stats {
@@ -771,11 +771,11 @@ footer .social-links {
   }
 
   /*=====#Footer========================*/
- 
+
   footer {
     padding-block: 8rem;
   }
- 
+
   footer .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'A B';
